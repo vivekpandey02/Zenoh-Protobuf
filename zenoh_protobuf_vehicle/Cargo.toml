@@ -1,0 +1,29 @@
+[package]
+name = "zenoh_protobuf_vehicle"
+version = "0.10.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+zenoh = {version = "0.7.2-rc", default-features = true }
+async-std = { default-features = false, features = [
+	"attributes",
+] }
+prost = "0.10"
+bytes = "1.1"
+clap = "2.33.3"
+env_logger = "0.9.0"
+futures = "0.3.12"
+git-version = "0.3.4"
+json5 = "0.4.1"
+log = "0.4"
+protobuf = { version = "3.2.0" }
+
+[build-dependencies]
+protobuf-codegen = { version = "3.2.0"}
+protoc-bin-vendored = { version = "3.0.0" }
+
+[[example]]
+name = "z_sub"
+path = "examples/z_sub.rs"
