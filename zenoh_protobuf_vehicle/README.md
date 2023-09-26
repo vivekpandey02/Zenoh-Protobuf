@@ -6,4 +6,4 @@ A simple example of zenoh usage with Protobuf, relying on [prost](https://crates
 
 ## Usage
 
-  - `./target/debug/examples/z_sub`
+  - `./target/debug/examples/z_sub -m "peer" -k "fms/vehicleStatus"`
