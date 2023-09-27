@@ -6,7 +6,18 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-zenoh = {version = "0.7.2-rc", default-features = true }
+zenoh = {version = "0.7.2-rc", default-features = false, features = [
+     "auth_pubkey",
+     "auth_usrpwd",
+    # "transport_multilink",
+    # "transport_quic",
+     "transport_tcp",
+     "transport_tls",
+     "transport_udp",
+     "transport_unixsock-stream",
+     "transport_ws",
+] }
+
 async-std = { default-features = false, features = [
 	"attributes",
 ] }
